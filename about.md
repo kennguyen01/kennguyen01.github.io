@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+My name is Ken Nguyen. I’m an aspiring programmer. This blog is about my journey into programming. I want to use this blog as a way for me to express my thoughts on what I’ve learned. I believe that by writing, I will be able to convey my ideas succinctly and become a better programmer. My hope is that you find my blog useful and share with me what you encounter on your own programming journey.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+My main interest is learning about and developing Artificial Intelligence. I chalk that up to me reading too many science fiction novels and playing tons of video games when I was a kid.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+If you have any comment or question for me, head over to the Contact page and shoot me an email.
