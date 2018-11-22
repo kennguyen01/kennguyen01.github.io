@@ -1,2 +1,2 @@
-# kennguyen01.github.io
+# Ken Nguyen
 Jekyll Static Programming Blog
