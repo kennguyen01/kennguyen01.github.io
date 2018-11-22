@@ -32,10 +32,11 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: default
+      layout: post
       permalink: /:categories/:title.html
+      excerpt_separator: <!--more-->
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

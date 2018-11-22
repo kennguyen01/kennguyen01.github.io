@@ -1,10 +1,12 @@
 ---
-title: Identity and Craftmanship
+title: Identity and Craftsmanship
 date: 2018-10-27
 categories: rants
 ---
 
 A thought came to me in such a force that I felt the need to express it. There were times before when I had an idea in my mind, only to push it back because it was not a good time for me to put it down. These first few lines I put down are just reminder to myself of the thought before I fail to catch the tail end of it.
+
+<!--more-->
 
 ## Identity
 
