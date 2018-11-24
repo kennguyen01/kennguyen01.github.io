@@ -12,15 +12,15 @@ This is the second part of the mini cactpot algorithm. This post is about calcul
 
 Similar to class `Game`, class `Calculate` will also take one argument, the dictionary of ticket positions. I’m going to initialize the class.
 
-```python3
+{% highlight python %}
 class Calculate:
     def __init__(self, ticket):
         self.positions = ticket
-```
+{% endhighlight %}
 
 Since I want to calculate each three number lines, I use dictionary to map each line to its three positions on the ticket.
 
-```python3
+{% highlight python %}
 def lines(self):
     ticket_lines = {
         1: [self.ticket['g'], self.ticket['h'], self.ticket['i']],
@@ -33,11 +33,11 @@ def lines(self):
         8: [self.ticket['c'], self.ticket['e'], self.ticket['g']]
     }
     return ticket_lines
-```
+{% endhighlight %}
 
 My next method, `combinations`, is actually a Python built-in. The reason why I wrote out the code was because my free [Trinket.io](https://trinket.io/) did not support itertools.
 
-```python3
+{% highlight python %}
 @classmethod
 def combinations(cls, iterable, r):
     pool = tuple(iterable)
@@ -56,29 +56,29 @@ def combinations(cls, iterable, r):
         for j in range(i+1, r):
             indices[j] = indices[j-1] + 1
         yield tuple(pool[i] for i in indices)
-```
+{% endhighlight %}
 
 The method takes an iterable and return tuples of combination for those elements at specific length. You can read more about it here: [itertools.combinations](https://docs.python.org/3.6/library/itertools.html#itertools.combinations). Suppose if you have a list of 4 items and you want to get all 2 item combinations, you can use `itertools.combinations(list, length)` for that.
 
-```python3
+{% highlight python %}
 import itertools
 
 a = [1, 2, 3, 4]
 b = list(itertools.combinations(a, 2))
 
 >>> [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
-```
+{% endhighlight %}
 
 With this method, I can calculate possible combinations for the numbers the user has not picked. So if the user picked 1, 2, 3, 4 then 5, 6, 7, 8, 9 are still available. Consequently, I just need to find out which positions on the ticket that is still hidden and replace those with the available numbers. I received help from Francisco Couzo on StackOverflow on the method to replace hidden values with combinations. Here’s the link for the question I posted: [question](https://stackoverflow.com/questions/47765021/how-to-get-combinations-of-list-with-values-from-another-list).
 
-```python3
+{% highlight python %}
 def lists_combinations(self, list_1, list_2):
     indices = [i for i, x in enumerate(list_1) if isinstance(x, str)]
     for combo in self.combinations(list_2, len(indices)):
         for index, char in zip(indices, combo):
             list_1[index] = char
         yield tuple(list_1)
-```
+{% endhighlight %}
 
 His function finds the indices of all the string in the first list and replace them with combinations from second list. I modified the function to fit with the class. In my case, `list_1`  is the value of each line for the dictionary I created earlier. While `list_2` is the available numbers.
 
@@ -86,17 +86,17 @@ His function finds the indices of all the string in the first list and replace t
 
 The actual calculation happens in the method `lines_combinations`. I used another dictionary to map each line to its possible combinations. It uses the method earlier to do that. `num_lines` and `num_list` are simply the same arguments for `list_combinations`.
 
-```python3
+{% highlight python %}
 def lines_combinations(self, num_lines, num_list):
     lines_combo = {}
     for line in num_lines:
         lines_combo[line] = list(self.lists_combinations(num_lines[line], num_list))
     return lines_combo
-```
+{% endhighlight %}
 
 With the combinations for each line calculated, I can go on crunching out the potential payout of each line. The payout varies depend on the sum for each line. By summing up each combinations returned from `lines_combination` and multiply them with the payout, I can get all potential payouts. Finally, I can find the average potential payout by using floor division of the total sum with the length of the list.
 
-```python3
+{% highlight python %}
 @classmethod
 def lines_payout(cls, combinations):
     payout = {6: 10000, 7: 36, 8: 720, 9: 360, 10: 80, 11: 252, 12: 108,
@@ -110,11 +110,11 @@ def lines_payout(cls, combinations):
     for line in sum_payout:
         sum_payout[line] = sum([payout[value] for value in sum_payout[line]]) // len(sum_payout[line])
     return sum_payout
-```
+{% endhighlight %}
 
 However, the user does not need to know what happens in the code. Therefore I used another method to print out a message notifying the user which line has the best possible payout. There are cases where multiple lines can have the best payout. `recommendation` takes the dictionary with each line average payout and find the maximum value. It returns a string containing the line(s) recommended and the potential payout value(s).
 
-```python3
+{% highlight python %}
 @classmethod
 def recommendation(cls, user_payout):
     print('---------------')
@@ -124,6 +124,6 @@ def recommendation(cls, user_payout):
     for key in recommend:
         string += Color.BOLD + '> Line {} has the highest payout of {}!\n'.format(key, user_payout[key]) + Color.END
     return string
-```
+{% endhighlight %}
 
 All that’s left to do now is to write a function to set up the game and calculate the potential payout. That should be a simple matter so I’m going to end the post here.

@@ -20,7 +20,7 @@ A difference I found between C and Python is that I must declare the data type o
 
 For me, one of the most jarring experience learning C is that it does not support a string type. Instead, what C has is an array of characters terminated by a null character. So for a string such as `"hello, world"` there are actually 13 characters even though you can only see 12 characters, including space, in that string. The null character `\0`  is at the end of every string to signify the end of the string. For example, if I want to count how many characters does `"hello, world"`  have, I just increment `i` by one until I encounter a null character.
 
-```c
+{% highlight c %}
 #include <stdio.h>
 
 int main(void) {
@@ -36,7 +36,7 @@ int main(void) {
 }
 
 >>>12
-```
+{% endhighlight %}
 
 The for loop does not need to have anything in it since I already increment `i` by one each time through the loop. As far as the size of the string goes, I can declare to array to contain 13 bytes, 1 for each character, by explicitly writing `char s[13] = "hello, world"` or I can let the compiler handle that for me. This is the part where C can be particularly nitpicky. If for some reason I decide that the size of my array is less than 13, I can run into buffer overflow issue if I decide to use that string in another function.
 
@@ -48,7 +48,7 @@ Now we come to the part where I spent quite a bit of time on, pointers. Simply p
 
 That was a lot of explanation so let me give an example directly from the book. say you want to swap variables `x` and `y`, you assign the addresses of those variables to the function swap with the operator `&`. So the function looks like `swap(&x, &y)`. Inside the function `swap`, you use the operator `*` to access the objects the pointers point to.
 
-```c
+{% highlight c %}
 void swap(int *x, int *y) {    /* interchange *x and *y */
     int temp;
 
@@ -56,7 +56,7 @@ void swap(int *x, int *y) {    /* interchange *x and *y */
     *x = *y;
     *y = temp;
 }
-```
+{% endhighlight %}
 
 Pointers are used to access an array more efficiently. If you assign variable `p` to point to array `a[]`, it will point to the first element, or `a[0]` of the array. Consequently, `*(p + 1)` points to the address of the next element `a[1]. Pointers and arrays in C are closely linked. Accessing elements of an array in pointers are faster than using array subscripting. Pointers can also be used to point to functions and other pointers so they are extremely convenient when used properly.
 
@@ -64,24 +64,24 @@ Pointers are used to access an array more efficiently. If you assign variable `p
 
 One of the reason why pointers are covered extensively in C is because of its importance in data structures. Take a linked list for example. The typical way to implement one is as followed:
 
-```c
+{% highlight c %}
 typedef struct list {
     int item;
     struct list *next;
 } list;
-```
+{% endhighlight %}
 
 `typedef` defines a new data type that you created while `struct` denotes a structure that can contain multiple data types. There are only two things in the brackets, an `item` that you want to hold and a pointer pointing to the next node of the linked list. Of course you can implement a linked list without pointers by using arrays. But using pointers is just more efficient.
 
 Let’s look at another example, a binary search tree implementation:
 
-```c
+{% highlight c %}
 typedef struct tree {
     int item;
     struct tree *left;
     struct tree *right;
 } tree;
-```
+{% endhighlight %}
 
 Similar to the example above, the tree contains one item. The only difference is that instead of only one pointer to point to next node, there are two pointers. One pointing to the left node and the other to the right node. Again, you can do this without pointers by using array indices but there’s a chance where you might run into problem if you call `malloc` to allocate memory for each node of the tree individually.
 

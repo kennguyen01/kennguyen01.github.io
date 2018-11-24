@@ -38,10 +38,11 @@ Let’s go over the system I’ll be using to write the program. The system is c
 
 | 2| 3| 4| 5|	6| 7|8|	9|10|	J| Q|	K|A|
 |+1|+1|+2|+2|+2|+1|0|-1|-2|-2|-2|-2|0|
-<br>
+
+
 As you can see, this system is more complicated than the more popular High-Low system. The values are not just 0, +1, -1 but tend to vary more. For a player counting in their head, this makes it difficult to keep track of the count. But for a computer, this is a simple matter. The best way to represent this is to use a dictionary. We can use a list to record each value from user’s input from the dictionary values and add them up together for the running count.
 
-```python3
+{% highlight python %}
 def card_value(cards):
     values = {'2': 1, '3': 1, '7': 1,
               '4': 2, '5': 2, '6': 2,
@@ -50,24 +51,24 @@ def card_value(cards):
               '0': -2}
     l = [values[card] for card in cards if card in values]
     return sum(l)
-```
+{% endhighlight %}
 
 ## Initializing The Game
 
 In AOII system, the player is also expected to keep track of how many aces are dealt. For example, if the game uses eight decks, the player can input that integer. The total number of aces is 32 (8 decks x 4 aces = 32 aces). If two aces have already been dealt, there are still 30 aces left in the deck. Other important variables to keep track of are how many cards are already dealt and how much of the deck remained. These two variables let us calculate the true count.
 
-```python3
+{% highlight python %}
 decks = int(input('Number of decks: '))
 count, cards = 0, 0
 decks_used = 0
 aces = decks * 4
-```
+{% endhighlight %}
 
 The true count is simply our running count divided by the number of remaining decks in the shoe. Since a +2 running count at the start is different from +2 the end even though the numbers are the same. This is because the number of cards left are different. This gives us the most accurate count for the whole deck. In a real game, players can approximate the amount of decks left by looking at the discard tray. Our program keeps track of that for us.
 
 To keep the game constantly running, we just need to wrap all our logic into a while loop. The only ways to break out of this loop is if the player wants to quit or if there are no more cards left to play.
 
-```python3
+{% highlight python %}
 while True:
     user_cards = input('Enter cards: ')
     if user_cards == 'quit':
@@ -88,13 +89,13 @@ while True:
     if remain <= 0:
       print('Finished deck')
       break
-```
+{% endhighlight %}
 
 ## Counting Statistics
 
 This program now precisely calculates both the running count and the true count. Of course it’s not very useful if all the statistics are calculated silently in the background. To solve this problem, we can add conditions to display recommendations to the user based on the true count. If the true count is high, we recommend the player to increase his bet. And vice versa. We can also display all the information calculated so far each time through the loop.
 
-```python3
+{% highlight python %}
 # Make recommendations based on true count
 if true_count >= 1:
     print('Increase your bet')
@@ -107,7 +108,7 @@ print('>>> True Count: {}'.format(round(true_count, 2)))
 print('Cards Dealt: {}'.format(cards))
 print('Aces Left: {}'.format(aces))
 print('Deck Remain: {}'.format(round(remain, 2)))
-```
+{% endhighlight %}
 
 With that, our program now does the heavy lifting for the player. He doesn’t need to worry about keeping track of the count. It frees up his brain to make decision about the amount of money he should bet. I put the whole program in the interactive window below. Feel free to play around with it and let me know if you find it useful. I cannot guarantee that you will make money from casinos using this program so don’t play what you can’t afford to lose.
 

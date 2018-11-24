@@ -27,7 +27,7 @@ We don’t need to worry about the picture since this is only the implementation
 
 The list of words is either a list we’ve created or a text file. For now, let’s just make a list of random words from the dictionary. We can use the random module to select the word from that list.
 
-```python3
+{% highlight python %}
 import random
 
 words_list = ['acorn', 'bull', 'cactus', 'dragon', 'exercise',
@@ -35,7 +35,7 @@ words_list = ['acorn', 'bull', 'cactus', 'dragon', 'exercise',
 
 def random_word(words_list):
 return random.choice(words_list)
-```
+{% endhighlight %}
 
 ## Check User Input Against Word
 
@@ -43,7 +43,7 @@ Now we need to display the number of letters in the word to the user. Since this
 
 The necessary parameters for this function are the random `word` and a list of guesses, `user_guesses`, user made.
 
-```python3
+{% highlight python %}
 def display_letters(word, user_guesses):
     letters_string = ''
     for letter in word:
@@ -52,13 +52,13 @@ def display_letters(word, user_guesses):
         else:
             letters_string += '_ '
     return letters_string
-```
+{% endhighlight %}
 
 ## Tell User What Letters Are Available
 
 Once user enters a letter, we need to remove that letter from the alphabet. This helps user see what letters are still available to use. It is very similar to the function above. It checks the letters inside  `user_guesses` against the alphabet and return a string with available letters.
 
-```python3
+{% highlight python %}
 def available_letters(user_guesses):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     letters_left = ''
@@ -66,19 +66,19 @@ def available_letters(user_guesses):
         if letter not in user_guesses:
             letters_left += letter
     return letters_left
-```
+{% endhighlight %}
 
 ## Check If Word Is Guessed Correctly
 
 Now let’s write a function to check if the letters guessed by user match the word. If each string inside  `word` are also in `user_guesses`, the function return True and False otherwise.
 
-```python3
+{% highlight python %}
 def correct_word(word, user_guesses):
     for letter in word:
         if letter not in user_guesses:
             return False
     return True
-```
+{% endhighlight %}
 
 ## Looping Through the Game
 
@@ -92,7 +92,7 @@ With that in mind, let’s go over how the game is going to play out. First, the
 
 The only thing we need to look out for is when the user guesses a letter that he already used. If that’s the case, we need to go back to the beginning of the loop and start over. For the terminating condition, we can either use a `break` statement to exit the loop or use a flag to set the loop condition to False. Either will work.
 
-```python3
+{% highlight python %}
 def hangman():
     word = random_word(words_list)
     print('Welcome to the Hangman game!')
@@ -126,7 +126,7 @@ def hangman():
         if chances == 0:
             print('You lost! The word was {0}'.format(word))
             break
-```
+{% endhighlight %}
 
 Once we combine everything together, the game will work. By having each piece of the program does different thing, we can easily debug the program if we run into a problem.
 
