@@ -16,7 +16,7 @@ Before we start, I do want to say ahead of time that I will be using Python 3 an
 
 Now let’s see a simple example of deque in action. Suppose you want to remove the first element of a list and move the second element to the end. Then repeat the process until only one element is left and return it.
 
-```python
+```python3
 from collections import deque
 
 def delete_swap(L):
@@ -33,7 +33,7 @@ def delete_swap(L):
 ### Merge Two Dictionaries
 In Python 3.5 and above, you can merge two dictionaries together in a single expression.
 
-```python
+```python3
 c = {**a, **b}
 ```
 
@@ -41,7 +41,7 @@ What’s cool about this expression is that you can perform dictionary comprehen
 
 The function returns a dictionary of 52 keys, 26 for each lowercase and uppercase letters. What I did was to use dictionary comprehension for each dictionary’s shift while merging both of them together to a new dictionary:
 
-```python
+```python3
 import string
 
 def shift_dict(shift):
