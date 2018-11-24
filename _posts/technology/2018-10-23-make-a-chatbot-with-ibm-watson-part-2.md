@@ -1,12 +1,12 @@
 ---
-title: Make a Chatbot with IBM Watson Part 1
+title: Make a Chatbot with IBM Watson Part 2
 date: 2018-10-23
 categories: technology
 ---
 
 ![Chatbot](/images/chatbot.jpg)
 
-Here is the link to part 1: [Part 1](#)
+Here is the link to part 1: [Part 1](/technology/make-a-chatbot-with-ibm-watson-part-1.html)
 
 Now that we finished with defining the intents for our chatbot, let’s move on to entities and dialogs. In general, entities are specific details about what the user wants. In the previous part, I mentioned that a user who wants to find RPG games is different from a user who wants to get a shooter game. The details about their games are different. This is where entities come in. They allow us to hone in specifically on the details and deliver customized responses to our users.
 
