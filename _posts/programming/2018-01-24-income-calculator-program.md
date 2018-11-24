@@ -109,3 +109,9 @@ def table(d):
         else:
             print('{} : ${:.2f}'.format(m, d[m]))
 ```
+
+That is everything we need for our income calculator. It is a very basic program but it does what it’s supposed to do. If you want to make it more complete, I recommend you factor in other taxes such as state, county, and FICA (Social Security and Medicare). I will put everything in this post in the interactive console below. Feel free to play around with it and see how it works.
+
+## Income Calculator Interactive Program
+
+<iframe src="https://trinket.io/embed/python/b2be27aa49" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
