@@ -89,7 +89,13 @@ template {
 a {
   background-color: transparent;
 }
-
+#menu {
+  font-size: 25px;
+}
+.menu {
+  padding-left: 1.5em;
+  font-size: 14px;
+}
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
