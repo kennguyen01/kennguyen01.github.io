@@ -1,5 +1,5 @@
 ---
-title: Static Blog with Jekyll and Github Pages
+title: Jekyll Static Blog with Github Pages
 date: 2018-11-28
 categories: web-development
 ---
