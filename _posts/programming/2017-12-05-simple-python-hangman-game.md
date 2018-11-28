@@ -14,7 +14,7 @@ In this post, I will walk through the process of writing the game in Python. Iâ€
 
 Hangman is a word guessing game at its core. The game selects a random word and user needs to input each letter per turn. The letter is checked against the word. The game then gives user feedback whether he guessed correctly. User has six chances for incorrect guess before he loses, indicated by the complete picture of the hanging man.
 
-![Hangman](/images/hangmang.jpg)
+![Hangman](/images/hangman.jpg)
 
 We donâ€™t need to worry about the picture since this is only the implementation of the game. We can use text to indicate guesses user has left. The outline of the game is as followed:
 - Get random word from list
