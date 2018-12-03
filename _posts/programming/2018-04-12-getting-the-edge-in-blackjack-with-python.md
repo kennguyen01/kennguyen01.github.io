@@ -4,7 +4,7 @@ date: 2018-04-12
 categories: programming
 ---
 
-![Casino chips](/images/casino-chips.jpg)
+![Casino chips](https://i.imgur.com/sh3yQsk.jpg)
 
 For the past several years in Maryland, there seemed to be a new casino opening up every other year. My first experience of going to the casino was for a friend’s birthday party back in college. We thought it would be an interesting experience to come in and check out the newest casino, Maryland Live!, that just opened up back then. When we got there, I was in awe at how much money people were blowing on games. People were laughing, yelling, and drinking while putting stacks and stacks of chips on the table. Then a friend pulled me over to a Blackjack table that had open seats and asked me to join him.
 

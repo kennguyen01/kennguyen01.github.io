@@ -4,7 +4,7 @@ date: 2018-03-30
 categories: rants
 ---
 
-![Rabbit hole](/images/rabbit-hole.jpg)
+![Rabbit hole](https://i.imgur.com/RLKiPj1.jpg)
 
 If you want to start learning programming today, it’s very easy. There are so many resources available online that makes it seem like you can become a good programmer in no time at all. I did a quick google search for “how to learn python” and the first thing that pops up is a video titled [How to Learn Python in Five Minutes](https://www.youtube.com/watch?v=ohr6O78jGzs). This video gives you a basic outline of the steps you need to take to become proficient at programming. But the title is extremely misleading. The path to become a programmer is not always linearly laid out as the speaker described.
 

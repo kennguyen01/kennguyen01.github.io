@@ -37,11 +37,11 @@ The default theme for a new Jekyll site is Minima. Of course you can always chan
 
 Github supports custom domain name, you just go to the **Settings** of the repo and scroll down to where it says **GitHub Pages**. I changed the custom domain to my own domain name. That automatically created a CNAME file in my repo. But the domain name still doesn't point to Github yet. To do that, I need to configure the [A records](https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider) with my NameCheap domain.
 
-![Namecheap A records](/images/namecheap-a-records.jpg)
+![Namecheap A records](https://i.imgur.com/1MzQCvc.jpg)
 
 A free SSL certificate is also provided by Github. I had to wait for some time while the certificate is being issued. After that's done, I just click on **Enforce HTTPS**.
 
-![Github pages settings](/images/github-pages-settings.jpg)
+![Github pages settings](https://i.imgur.com/quLtE7k.jpg)
 
 ## A Huge Saving
 
