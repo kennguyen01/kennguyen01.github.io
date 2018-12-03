@@ -12,6 +12,7 @@ markdown: kramdown
 theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Front matter defaults
 defaults:
