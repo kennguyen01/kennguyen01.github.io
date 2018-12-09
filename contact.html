@@ -7,9 +7,21 @@ layout: page
     If you have any question or comment, feel free to let me know.
 </p>
 <form action="https://formspree.io/nguyen.ken.v@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Name" />
-  <input type="email" name="_replyto" placeholder="Email" />
-  <textarea name="message" placeholder="Message"></textarea>
   <input type="text" name="_gotcha" style="display:none" />
-  <button type="submit">Submit</button>
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="_replyto" />
+  </div>
+  <div>
+    <label for="message">Message:</label>
+    <textarea name="message" id="message"></textarea>
+  </div>
+
+  <div class="contact-btn">
+    <button type="submit">Submit</button>
+  </div>
 </form>
