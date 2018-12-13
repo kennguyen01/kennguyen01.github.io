@@ -1,5 +1,13 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
+/* title link */
+.main-title {
+  color: white;
+}
+.main-title:hover {
+  color: lightgray;
+}
+
 form {
   margin: 0 auto;
   width: 400px;
