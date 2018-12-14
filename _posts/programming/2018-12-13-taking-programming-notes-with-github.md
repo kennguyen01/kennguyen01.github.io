@@ -6,6 +6,8 @@ categories: programming
 
 I used to take programming notes with pen and paper. It was helpful in the beginning because it forced me to focus on the code so I can write it down. The drawback is that it's really slow and sometimes the code can go over several pages. Trust me, flipping through pages of code is not fun.
 
+<!--more-->
+
 After I filled up a bunch of notebooks, I believed that it's time for me to go digital. Taking notes by hand is not efficient for me anymore. If I'm on the computer I can easily type in the notes and open a new tab on Firefox to research when I get stuck.
 
 My main criteria for a note taking tool is ease of use and syntax highlighting, everything else is secondary.
@@ -51,4 +53,4 @@ function getIndexToIns(arr, num) {
 ```
 {% endhighlight %}
 
-When I checked the page that Github generated, it looked great. The notes and code are nicely displayed and highlighted. The only caveat is that I have to type everything in Markdown first but that's not a big deal. Github is an awesome tool and the folks who built it deserve serious kudos. 
+When I checked the page that Github generated, it looked great. The notes and code are nicely displayed and highlighted. The only caveat is that I have to type everything in Markdown first but that's not a big deal. Github is an awesome tool and the folks who built it deserve serious kudos.
