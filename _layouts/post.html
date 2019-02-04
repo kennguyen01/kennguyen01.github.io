@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+<h1 id="post-title">{{ page.title }}</h1>
 <p class="meta">
   {{ page.date | date_to_string }}
   <br />
@@ -10,4 +10,4 @@ layout: default
 
 {{ content }}
 
-<h3><a href="#main-title">Back to top</a></h3>
+<h3><a href="#post-title">Back to top</a></h3>
