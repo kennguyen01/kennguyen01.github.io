@@ -12,7 +12,7 @@ One thing I disliked about Windows is that the system tends to become slower ove
 
 The good thing about building my own computer is that I could swap out components when better options became available. I upgraded the power supply and graphics card recently so the oldest parts I have are the motherboard, CPU, RAM, and hard drive. I downloaded [Speccy](https://www.ccleaner.com/speccy) to see the exact models of those components.
 
-![PC Specs](https://imgur.com/JHWao2b)
+![PC Specs](https://i.imgur.com/JHWao2b.jpg)
 
 It's been years since I installed them so I did some quick Google searches on them. My RAM is just the standard DDR3 and the hard drive is just a regular 1TB HDD that I bought on Amazon. Nothing much to think about there. On the CPU model, I found an [article](https://en.wikipedia.org/wiki/List_of_Intel_Core_i7_microprocessors#Ivy_Bridge_microarchitecture_(3rd_generation)) on Wikipedia. It's the 3rd generation of Intel i7 released back in 2012. Intel currently has the 8th/9th generation available so my CPU is ancient by current standards.
 
