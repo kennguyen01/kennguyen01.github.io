@@ -16,6 +16,12 @@ Usually with quotations, I tend to use `<blockquote>` as the default element for
 <p>Colin Powell said, <q>There are no secrets to success. It is the result of preparation, hard work, and learning from failure.</q></p>
 {% endhighlight %}
 
+I will wrap the output of the examples in `<blockquote>` so they are clearly separated and visible.
+
+<blockquote>
+    <p>Colin Powell said, <q>There are no secrets to success. It is the result of preparation, hard work, and learning from failure.</q></p>
+</blockquote>
+
 I can see how it's not being used often. Instead of typing out `<q>` and `</q>`, I can just type out the double quotes `""`. There's less keystrokes and it's much easier to remember.
 
 ## Abbreviations and Acronyms
@@ -26,6 +32,10 @@ The elements used for abbreviations and acronyms are `<abbr>` and `<acronym>`, r
 <p>I live in <abbr title="Maryland">MD</abbr> and went to <acronym title="University of Maryland">UMD.</acronym></p>
 {% endhighlight %}
 
+<blockquote>
+    <p>I live in <abbr title="Maryland">MD</abbr> and went to <acronym title="University of Maryland">UMD.</acronym></p>
+</blockquote>
+
 ## Citations and Definitions
 
 I did not know that you could `<cite>` a book with HTML. When I think of citing something, I think of the long citation in either <acronym title="American Psychological Association">APA</acronym> or <acronym title="Modern Language Association">MLA</acronym> format. But citing in HTML simply means that you are referencing a book or research paper.
@@ -34,11 +44,19 @@ I did not know that you could `<cite>` a book with HTML. When I think of citing 
 <p><cite>Hyperion</cite> by Dan Simmons was one of the best science fiction books I've read.</p>
 {% endhighlight %}
 
+<blockquote>
+    <p><cite>Hyperion</cite> by Dan Simmons was one of the best science fiction books I've read.</p>
+</blockquote>
+
 If you want to define a new term that's not clear to the user, you can use the `<dfn>` element to specify the defining instance of it. This is only done on the first time you used the term. In Firefox, the defined term appears Italic but it varies based on browser.
 
 {% highlight html %}
 <p><dfn>Cryptocurrency</dfn> is a digital currency in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds, operating independently of a central bank.</p>
 {% endhighlight %}
+
+<blockquote>
+    <p><dfn>Cryptocurrency</dfn> is a digital currency in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds, operating independently of a central bank.</p>
+</blockquote>
 
 ## Address
 
@@ -57,6 +75,20 @@ The `<address>` element means exactly that, it contains the contact details of t
     </span>
 </address>
 {% endhighlight %}
+
+<blockquote>
+<address class="vcard">
+    <span class="url fn org" href="https://about.google/intl/en/">Google LLC</span>
+    <br />
+    <span class="adr">
+        <span class="street-address">1600 Amphitheatre Pkwy</span>
+        <br />
+        <span class="locality">Mountain View</span>,
+        <span class="region" title="California">CA</span>,
+        <span class="postal-code">94043</span>
+    </span>
+</address>
+</blockquote>
 
 While this seems like a lot of code to type out, it's the semantically correct way to provide contact information to the user for the page.
 
