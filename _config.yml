@@ -25,3 +25,6 @@ defaults:
       layout: post
       permalink: /:categories/:title.html
       excerpt_separator: <!--more-->
+
+# Google Analytics
+google_analytics: UA-138983381-1
