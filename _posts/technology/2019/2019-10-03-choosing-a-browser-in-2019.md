@@ -8,7 +8,7 @@ When I was in high school, Internet Explorer (IE) was the default for Windows so
 
 ![IE toolbars](https://i.imgur.com/I6uLvSI.jpg)
 
-<!--more -->
+<!--more-->
 
 I removed all those toolbars every chance I had. Then my family added them back again. It became a constant tug of war until one day I realized I couldn't win and looked for an alternative browser to use. There were a few other good browsers at the time: Firefox, Safari, and Opera. Chrome just came out for a few months at the time so I didn't want to use something so new. I tried out Firefox first and it was love at first use. It was fast, easy to use, and it became my default browser for years to come.
 
