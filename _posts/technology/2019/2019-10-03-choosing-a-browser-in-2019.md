@@ -1,5 +1,5 @@
 ---
-title: A Browser in 2019
+title: Choosing A Browser in 2019
 date: 2019-10-03
 categories: technology
 ---
