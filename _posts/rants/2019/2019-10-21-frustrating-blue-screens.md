@@ -12,7 +12,7 @@ It's a regular Tuesday night. I came back from work, had dinner, and watched som
 
 > If you'd like to know more, you can search online later for this error: DRIVER_IRQL_NOT_LESS_OR_EQUAL
 
-<!--more -->
+<!--more-->
 
 I watched helplessly as the progress percentage slowly counts up to 100. The computer restarted and I was back to the login screen. Not really sure what happened, I searched online for what the error message means. Some possible causes are corrupted system files, hardware issues, and corrupted device drivers. I needed to know exactly what causes it.
 
