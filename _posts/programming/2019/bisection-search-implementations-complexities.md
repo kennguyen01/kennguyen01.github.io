@@ -1,7 +1,7 @@
 ---
-title:
-date:
-categories:
+title: Bisection Search Implementation Complexities
+date: 2019-10-28
+categories: programming
 ---
 
 This post drew from [MIT 6.00.1x](https://www.edx.org/course/6-00-1x-introduction-to-computer-science-and-programming-using-python-3) course on edX. I saw something very interesting in a lecture when professor Grimson compared two different implementations of bisection search. The algorithm for bisection search given a sorted list is:
@@ -67,4 +67,8 @@ The recursive calls to helper function is straightforward. We use the mid point 
 
 ## Ease of Implementation
 
-While the second implementation is more efficient, I see that the first example is easier to implement. These two examples provided in the class were simple and straightforward. However, I can imagine a scenario where the difficulty of one implementation is much higher than the other. It's preferable to use an algorithm with lower complexity but if it takes a lot more time to implement or difficult to debug, the choice might not be clear then.
+While the second implementation is more efficient, the first example is easier to implement. These two examples provided in the class were simple and straightforward. However, I can imagine a scenario where the difficulty of one implementation is much higher than the other. It's preferable to use an algorithm with lower complexity but if it takes a lot more time to implement or difficult to debug, the choice might not be clear then.
+
+The scenario that came to my mind is using greedy algorithm to solve the Knapsack problem. The greedy algorithm might not give me the optimal solution to a 0/1 Knapsack problem but it's simple to implement. It's also very efficient with O(n log n) complexity. The other approaches to solving this problem optimally is exhaustive enumeration and dynamic programming. 
+
+Exhaustive enumeration complexity is O(n<sup>2</sup>), which is too inefficient for our purpose. Dynamic programming will result in an optimal solution but requires understanding of how to break the problem down and solving overlapping subproblems. Identifying those conditions and coming up with a dynamic programming algorithm is not easy. If an implementation generates an approximation that's good enough, I will use it and have working code now instead of trying to find the perfect solution. The tweaking and refactoring can come later.
