@@ -26,13 +26,13 @@ Otherwise, return `{status: 'OPEN', change: [...]}`, with the change due in coin
 
 An example test and answer was given on the challenge:
 
-{% highlight js %}
+```javascript
 // Test
 checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
 
 // Answer
 {status: "OPEN", change: [["QUARTER", 0.5]]}
-{% endhighlight %}
+```
 
 ## The Solution
 
@@ -42,10 +42,10 @@ From the test, I could see that I needed to find a way to loop through all denom
 
 So I had to fall back to using two arrays, one for the denominations and the other for the values.
 
-{% highlight js %}
+```javascript
 let denom = ['ONE HUNDRED', 'TWENTY', 'TEN', 'FIVE', 'ONE', 'QUARTER', 'DIME', 'NICKEL', 'PENNY'];
 let value = [100, 20, 10, 5, 1, .25, .1, .05, .01];
-{% endhighlight %}
+```
 
 The elements are from highest to lowest order so I do not have to do an extra step of sorting them.
 
@@ -53,7 +53,7 @@ The elements are from highest to lowest order so I do not have to do an extra st
 
 `cid` is a 2D array, which can be prone to errors if I'm not careful when working with it. An easier way to work with it is to simply convert the `cid` 2D array into an object. I will also define two variables, `total` and `change`, to keep track of the total amount in the register and change left.
 
-{% highlight js %}
+```javascript
 let total = 0;
 let change = cash - price;
 
@@ -62,11 +62,11 @@ for (let i of cid) {
     total += i[1];
     register[i[0]] = i[1];
 }
-{% endhighlight %}
+```
 
 I run the code now and the result is something like this:
 
-{% highlight js %}
+```javascript
 total = 335.40999999999997;
 register = {
     PENNY: 1.01,
@@ -79,7 +79,7 @@ register = {
     TWENTY: 60,
     'ONE HUNDRED': 100
 }
-{% endhighlight %}
+```
 
 The total is a bit weird but it's due to rounding error so I can fix it later. The main point is that I have converted `cid` into an object.
 
@@ -87,11 +87,11 @@ The total is a bit weird but it's due to rounding error so I can fix it later. T
 
 Before I go any further, I need to have a way to round the intermediate floats to two decimal places. If I don't do that, the answer will not work for every test case. The `Number.toFixed()` method formats a number into string using fixed-point notation. I just need to cast the string back into number again to get what I want:
 
-{% highlight js %}
+```javascript
 function twoDecimal(n) {
     return Number(n.toFixed(2));
 }
-{% endhighlight %}
+```
 
 ### Looping and Subtracting
 
@@ -99,7 +99,7 @@ Now comes the main logic of the function. I defined a `cashback` object to hold 
 
 The `cashback` object will be increased by the amount of the value if the denomination is already in it. Otherwise, it will create a new key for that denomination with the current value.
 
-{% highlight js %}
+```javascript
 let cashback = {};
 for (let i = 0; i < value.length; i++) {
     let v = value[i];
@@ -117,7 +117,7 @@ for (let i = 0; i < value.length; i++) {
         }
     }
 }
-{% endhighlight %}
+```
 
 ### Return the Result
 
@@ -127,7 +127,7 @@ After the previous loop, if `change` is greater than 0, that means there's not e
 
 Otherwise, there's more money in the register than the change. I will push all the keys and values in `cashback` object to the `result.change` array and return that.
 
-{% highlight js %}
+```javascript
 let result = {status: 'OPEN', change: []};
 
 if (change > 0) {
@@ -143,7 +143,7 @@ for (let d of denom) {
         result.change.push([d, cashback[d]]);
     }
 }
-{% endhighlight %}
+```
 
 ## A Challenging Problem
 
