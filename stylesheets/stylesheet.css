@@ -491,10 +491,10 @@ th {
 /* LAYOUT STYLES */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  color: #666;
+  color: #606060;
   background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
 }
 
@@ -541,7 +541,7 @@ header h2 {
 
 .inner {
   position: relative;
-  width: 940px;
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -552,7 +552,7 @@ header h2 {
 
 #main-content {
   float: left;
-  width: 690px;
+  width: 725px;
 }
 
 #main-content img {
@@ -660,7 +660,7 @@ form {
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
-  font-size: 2.8em;
+  font-size: 2.3em;
   font-weight: normal;
   color: #474747;
   text-indent: 6px;
