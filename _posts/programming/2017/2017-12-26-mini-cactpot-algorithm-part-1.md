@@ -14,41 +14,41 @@ This is the first part of the mini cactpot algorithm. If you want to take a look
 
 Since the ticket is a 3×3 matrix, I first thought of using a nested list for internal representation of the ticket. I could use a list comprehension for this and use 'x' as default values of each value.
 
-{% highlight python %}
+```python
 ticket = [['x' for j in range(3)] for i in range(3)]
 
 >>> ticket = [['x', 'x', 'x'],
 >>>           ['x', 'x', 'x'],
 >>>           ['x', 'x', 'x']]
-{% endhighlight %}
+```
 
 However, I realized when I tried to update user inputs to the nested list is that it can become complicated. I would need to keep track of each position inside the nested list based on its index value. So the first position is `ticket[0][0]` and the last position is `ticket[2][2]`. Then the user will need to enter their own numbers, which can lead to very messy code and prone to error. I decided against using nested list and just use a dictionary to map letters of the alphabet to each position.
 
-{% highlight python %}
+```python
 ticket = {'a': 'a', 'b': 'b', 'c': 'c', 'd': 'd', 'e': 'e',
           'f': 'f', 'g': 'g', 'h': 'h', 'i': 'i'}
-{% endhighlight %}
+```
 
 This helps me out significantly. Now I can pinpoint exactly where each position is based on their letter key. Then I use a class for ANSI escape sequences for text decoration to makes strings stands out in the console. This is optional but it helps with usability.
 
-{% highlight python %}
+```python
 class Color:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     END = '\033[0m'
-{% endhighlight %}
+```
 
 With the appropriate data structure set, now I can start writing out the class `Game` that takes one argument, the dictionary `ticket`.
 
-{% highlight python %}
+```python
 class Game:
     def __init__(self, ticket):
         self.ticket = ticket
-{% endhighlight %}
+```
 
 The user will be interacting with the program so a `display` method is needed. In my case I used a list for each line of string. On lines where the ticket numbers are, string formatting is useful. Just join them all together with `\n` in the return statement.
 
-{% highlight python %}
+```python
 def new_ticket(self):
     display = [
         '--------------',
@@ -73,11 +73,11 @@ def new_ticket(self):
 >>> 3  a  b  c
 >>> 2  d  e  f
 >>> 1  g  h  i
-{% endhighlight %}
+```
 
 The user can easily see where each 3-number lines are on the ticket by number 1-8 surrounding the ticket. The next step is to get the four numbers chosen by the user. The user simply enters the letter of the ticket and the number chosen. I use a for loop to get each letter-number pair, split the inputs and store them in `user_inputs` dictionary. This is static method that doesn’t use the class `Game` object at all.
 
-{% highlight python %}
+```python
 @staticmethod
 def user_numbers():
     user_inputs = dict()
@@ -85,11 +85,11 @@ def user_numbers():
         letter, number = input('Number {}: '.format(counter)).split()
         user_inputs[letter] = int(number)
     return user_inputs
-{% endhighlight %}
+```
 
 The next method is `fill_numbers`. It takes the values from the dictionary returned in `user_numbers` and fill them in the class attribute `ticket` if their dictionary keys match each other.
 
-{% highlight python %}
+```python
 def fill_numbers(self, numbers):
     """
     Fill in numbers to ticket from dictionary of user's inputs
@@ -99,6 +99,6 @@ def fill_numbers(self, numbers):
             if letter == key:
                 self.ticket[letter] = value
     return self.ticket
-{% endhighlight %}
+```
 
 Those are all the initial setups for the program. In the next post I will be talking about the actual calculation of all potential combinations in the class Game.

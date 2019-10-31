@@ -19,15 +19,15 @@ Now let’s work on another income calculator. I promise this one is not going o
 
 There are two main types of income we will figure out, wages and salary. Each one is calculated differently. If you are on salary, your monthly income will be whatever your annual salary is divided by twelve months. For example, a public school teacher average salary in Baltimore, MD is $56,000 so her monthly income is $4,666.67 ($56,000 / 12 months). Then the function simply gets user input for the annual salary in float and divide that amount by 12.
 
-{% highlight python %}
+```python
 def salary():
     s = float(input('\nEnter your annual salary: '))
     return s / 12
-{% endhighlight %}
+```
 
 On the other hand, a person with wages gets paid an hourly rate per hour. If a plumber makes $26 per hour and he works a standard 40 hours per week, he would make $1,040 ($26 x 40 hours) per week, or $4,160 per month. The main difference is that a person with wages gets paid 1.5 times the hourly rate if he works more than 40 hours per week. For the wages function, we need to take into account how many hours that person work per week. If the hours are more than 40, we need to add the overtime into the total wages.
 
-{% highlight python %}
+```python
 def wages():
     w = float(input("\nEnter hourly wage: "))
     h = int(input("Enter hours per week: "))
@@ -35,7 +35,7 @@ def wages():
         return w * h * 4
     elif h > 40:
         return (w * 40 + w * 1.5 * (h - 40)) * 4
-{% endhighlight %}
+```
 
 ## Federal Tax Brackets
 
@@ -43,7 +43,7 @@ With income out of the way, let’s talk a bit about taxes. There are a lot of d
 
 There are two functions in this category, `taxes` calculates how much taxes the user has to pay based on annual gross income while `tax_brackets` return what tax bracket the user is in.
 
-{% highlight python %}
+```python
 def taxes(i):
     if 0 < i <= 9325:
         return i * 0.1
@@ -59,9 +59,9 @@ def taxes(i):
         return 120910.25 + .35 * (i - 416700)
     else:
         return 121505.25 + .396 * (i - 418400)
-{% endhighlight %}
+```
 
-{% highlight python %}
+```python
 def tax_bracket(i):
     if 0 < i <= 9325:
         return '10%'
@@ -77,13 +77,13 @@ def tax_bracket(i):
         return '35%'
     else:
         return '39.6%'
-{% endhighlight %}
+```
 
 ## Dictionary of 12-Month Income
 
 Now that we have a way to calculate user’s income and taxes, we can use a dictionary to store those values. I multiply the `income` parameter by 12 since the functions `wages` and salary return a monthly income value. After that, we can find total annual taxes and divide that by 12 to get to the user’s monthly taxes. I do this because it makes it easier later when I want to calculate 12-month net income of the user.
 
-{% highlight python %}
+```python
 def annual_income(income):
     d = {}
     annual = income*12
@@ -94,13 +94,13 @@ def annual_income(income):
     for i in range(1, 13):
         d[i] = income*i - tax*i
     return d
-{% endhighlight %}
+```
 
 ## Displaying the Income Table
 
 Finally, we can present the user with a 12-month income table simply by printing out all the values of the dictionary from previous function. This function is optional but I think it’s nice for the user to be able to see how much his net income is for 12 months.
 
-{% highlight python %}
+```python
 def table(d):
     print('\n12 Months Net Income Breakdown')
     for m in d:
@@ -108,7 +108,7 @@ def table(d):
             print('{}  : ${:.2f}'.format(m, d[m]))
         else:
             print('{} : ${:.2f}'.format(m, d[m]))
-{% endhighlight %}
+```
 
 That is everything we need for our income calculator. It is a very basic program but it does what it’s supposed to do. If you want to make it more complete, I recommend you factor in other taxes such as state, county, and FICA (Social Security and Medicare). I will put everything in this post in the interactive console below. Feel free to play around with it and see how it works.
 

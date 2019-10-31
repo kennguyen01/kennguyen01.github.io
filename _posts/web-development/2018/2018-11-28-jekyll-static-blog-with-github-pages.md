@@ -18,7 +18,7 @@ The set up was a breeze since I already had a backup of my site in WordPress. Se
 
 When creating a new repository on Github, there's an option to turn that repo into a simple website by naming it `username.github.io`. The only caveat is that you would need to know some HTML/CSS and JavaScript to modify the site. However, other developers have already created a tool called [Jekyll](https://jekyllrb.com/) to generate the site for you. The documentation for Jekyll is straightforward so I just followed it to install Ruby development environment on Ubuntu.
 
-{% highlight shell %}
+```shell
 sudo apt install ruby-full build-essential
 
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
@@ -29,7 +29,7 @@ source ~/.bashrc
 gem install jekyll bundler
 
 jekyll new my_blog
-{% endhighlight %}
+```
 
 The default theme for a new Jekyll site is Minima. Of course you can always change it to something else. Github supported a bunch of different [themes](https://pages.github.com/themes/). At first I thought I would need to also learn Ruby to modify my site but Jekyll uses [Liquid](https://shopify.github.io/liquid/) templating language, which looks just like Jinja2 for Flask. Since I already knew Jinja2, that made it very simple for me to bring all my posts and code snippets over.
 

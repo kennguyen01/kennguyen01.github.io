@@ -36,7 +36,7 @@ The default markup language for Github to display is Markdown. And it comes with
 
 For example, here's the code for problem from Free Code Camp: return the lowest index at which value `num` should be inserted into array `arr` once it has been sorted.
 
-{% highlight js %}
+```javascript
 ```js
 function getIndexToIns(arr, num) {
     if (arr) {
@@ -51,6 +51,6 @@ function getIndexToIns(arr, num) {
     return 0;
 }
 ```
-{% endhighlight %}
+```
 
 When I checked the page that Github generated, it looked great. The notes and code are nicely displayed and highlighted. The only caveat is that I have to type everything in Markdown first but that's not a big deal. Github is an awesome tool and the folks who built it deserve serious kudos.
