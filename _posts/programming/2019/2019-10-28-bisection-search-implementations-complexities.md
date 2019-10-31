@@ -16,7 +16,7 @@ After every iteration, the list is cut in half so the complexity of this algorit
 
 ## First Implementation
 
-{% highlight python %}
+```python
 def bisect_search1(L, e):
     if L = []:
         return False
@@ -28,7 +28,7 @@ def bisect_search1(L, e):
             return bisect_search1(L[:half], e)
         else:
             return bisect_search1(L[half:], e)
-{% endhighlight %}
+```
 
 The base cases for this recursive implementation are when the list is empty or only has one element. Otherwise, we find the halfway point and ask whether it's greater than or less than `e`. Then we can throw away half of the list since the element cannot be there.
 
@@ -38,7 +38,7 @@ The problem is the argument being supplied to the recursive call. By calling `bi
 
 This second implementation requires more work but has a lower complexity. We are going to keep track of where we are in the list instead of making copies.
 
-{% highlight python %}
+```python
 def bisect_search2(L, e):
 
     def bisect_search_helper(L, e, low, high):
@@ -59,7 +59,7 @@ def bisect_search2(L, e):
         return False
     else:
         return bisect_search_helper(L, e, 0, len(L) - 1)
-{% endhighlight %}
+```
 
 The base case for this implementation is when the list is empty. Otherwise we'll call the helper function with `low` argument at index 0 and `high` argument at last index. Inside the helper function, we first check to see if the element has already been found. If it's not then we just set the mid point to be the average of high and low.
 
