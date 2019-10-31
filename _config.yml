@@ -29,3 +29,7 @@ defaults:
 
 # Google Analytics
 google_analytics: UA-138983381-1
+
+# Disqus Comments
+discus:
+  shortname: nguyenkenv-com
