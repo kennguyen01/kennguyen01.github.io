@@ -54,8 +54,9 @@ var disqus_config = function () {
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>    
 ```
+In the second function, you should see the line `s.src = 'https://SHORTNAME.disqus.com/embed.js';`. THe `SHORTNAME` is simply the shortname that Disqus uses to identify you. You don't need to worry about this. If you copied the code directly from Disqus, your shortname is automatically added.
 
-Create a file named `disqus.html` in your `_includes` folder and paste the code. Now uncomment the `disqus_config` function by deleting the opening and closing `/* */`. In the body of the function, you will see two variables that you need to modify: `PAGE_URL` and `PAGE_IDENTIFIER`. You simply need to change both of them to `'{{ page.url | absolute_url }}'`. Afterward your function should look like this:
+Now create a file named `disqus.html` in your `_includes` folder and paste the code. Now uncomment the `disqus_config` function by deleting the opening and closing `/* */`. In the body of the function, you will see two variables that you need to modify: `PAGE_URL` and `PAGE_IDENTIFIER`. You simply need to change both of them to `'{{ page.url | absolute_url }}'`. Afterward your function should look like this:
 
 ```javascript
 var disqus_config = function () {
