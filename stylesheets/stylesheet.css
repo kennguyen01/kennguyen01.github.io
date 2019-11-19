@@ -778,7 +778,6 @@ ul {
 ol {
   list-style-position: inside;
   list-style: decimal;
-  padding-left: 3px;
 }
 
 dl dd {

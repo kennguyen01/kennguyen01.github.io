@@ -1,6 +1,6 @@
 ---
 title: Basics of Working with Git
-date:
+date: 2019-11-18
 categories: technology
 ---
 
