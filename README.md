@@ -1,5 +1,5 @@
-# Ken Nguyen
+# Raising Exceptions
 
-Static programming blog built with Jekyll
+Just another programming blog built with Jekyll
 
-Link: [nguyenkenv.com](https://nguyenkenv.com/)
+Link: [Raising Exceptions](https://raisingexceptions.com/)
