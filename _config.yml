@@ -1,11 +1,11 @@
-title: Ken Nguyen
+title: Raising Exceptions
 locale: "en"
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Programming Blog
+  Just Another Programming Blog
 baseurl: ""
 url: "https://kennguyen01.github.io/"
-github_username:  kennguyen01
+github_username: kennguyen01
 
 # Build settings
 markdown: kramdown
