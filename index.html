@@ -9,8 +9,11 @@ layout: default
     <a href="{{ site.baseurl }}{{ post.url }}">
       <h2>{{ post.title }}</h2>
     </a>
+
     <p>{{ post.date | date_to_string }} | <a href="/categories/{{ post.categories }}">{{ post.categories }}</a></p>
     <p>{{ post.excerpt }}</p>
+    <a href="{{ site.baseurl }}{{post.url }}">Read more &rarr;</a>
+
   {% endfor %}
 </div>
 
