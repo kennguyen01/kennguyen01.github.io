@@ -1,5 +1,5 @@
 ---
 title: Verifying Github Commits
-date:
-categories: Programming
+date: 
+categories: programming
 ---
