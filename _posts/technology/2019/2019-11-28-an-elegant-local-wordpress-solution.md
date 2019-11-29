@@ -1,7 +1,7 @@
 ---
 title: An Elegant Local WordPress Solution
-date:
-categories: web-development
+date: 2019-11-28
+categories: technology
 ---
 
 <p align="center">
@@ -26,6 +26,6 @@ If you're ahead of me and have been looking at other options for local WordPress
 
 So why am I bringing this up now? It's because Flywheel just recently released Local for Linux. 
 
-My main computer is running Ubuntu now so I haven't used Local at all since I switched over. But the good folks at Flywheel listened to their community and worked on a couple of versions for Linux distributions. I could not be happier when I found out about the news. 
+My main computer is running Ubuntu now so I haven't used Local at all since I switched over. But the good folks at Flywheel listened to their community and released on a Linux version. I could not be happier when I found out about the news. 
 
-I won't write a short guide to setting up Local because everything is intuitive. It gives you the necessary controls and takes care of the niggling implementation details. Try it and you will wonder where has it been all your life.
+I won't write a short guide to setting up Local because everything is intuitive. It gives you the necessary controls and takes care of the niggling implementation details. Try it and I guarantee you will love the smooth experience.
