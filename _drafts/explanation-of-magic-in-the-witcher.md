@@ -1,5 +1,5 @@
 ---
-title: Definitions of Magic in the Witcher
+title: Explanation of Magic in The Witcher
 date: 
 categories: rants
 ---
@@ -14,4 +14,4 @@ I came across a poignant explanation of magic in <cite><a href="https://www.amaz
 >
 > &mdash; Yennefer
 
-The explanation resonated with me because you can replace the word **magic** with **code** and suddenly you have a beautiful explanation of programming.
+The explanation resonated with me because you can replace the word **magic** with **programming** and suddenly you have a beautiful explanation of programming. 
