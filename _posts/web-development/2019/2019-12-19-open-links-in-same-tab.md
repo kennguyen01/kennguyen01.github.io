@@ -1,6 +1,6 @@
 ---
 title: Open Links in Same Tab
-date:
+date: 2019-12-19
 categories: web-development
 ---
 
