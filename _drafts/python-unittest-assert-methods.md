@@ -6,6 +6,8 @@ categories: programming
 
 This post contains the assert methods listed in the documentation for Python [unittest](https://docs.python.org/3.6/library/unittest.html) module. It's a quick reference so I don't have to scroll through the docs to find a specific statement.
 
+<!--more-->
+
 ## Commonly Used
 
 | Method                     |Checks that             |
