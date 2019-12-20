@@ -1,6 +1,6 @@
 ---
 title: Python unittest Assert Methods
-date: 
+date: 2019-12-19
 categories: programming
 ---
 
