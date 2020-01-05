@@ -10,7 +10,7 @@ This post contains the assert methods listed in the documentation for Python [un
 
 ## Commonly Used
 
-| Method                     |Checks that             |
+| <strong>Method<strong>                     |<strong>Checks that</strong>             |
 |----------------------------|------------------------|
 | assertEqual(a, b)          | a  ==  b               |
 | assertNotEqual(a,  b)      | a  !=  b               |
