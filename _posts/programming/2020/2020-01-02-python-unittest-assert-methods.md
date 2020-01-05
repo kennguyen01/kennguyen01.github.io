@@ -27,7 +27,7 @@ This post contains the assert methods listed in the documentation for Python [un
 
 ## Exceptions, Warnings, and Logs
 
-| Method                                            | Checks that                                                        |
+| <strong>Method</strong>                                            | <strong>Checks that</strong>                                                        |
 |---------------------------------------------------|------------------------------------------------------------------|
 | assertRaises(exc,  fun,  *args,  **kwds)          | fun(*args,  **kwds)  raises exc                                  |
 | assertRaisesRegex(exc,  r,  fun,  *args,  **kwds) | fun(*args,  **kwds)  raises exc<br /> and the message matches regex r  |
@@ -37,7 +37,7 @@ This post contains the assert methods listed in the documentation for Python [un
 
 ## Specific Checks
 
-| Method                      | Checks that                                                                         |
+| <strong>Method</strong>                      | <strong>Checks that</strong>                                                                         |
 |-----------------------------|------------------------------------------------------------------------------------|
 | assertAlmostEqual(a,  b)    | round(a-b,  7)  ==  0                                                              |
 | assertNotAlmostEqual(a,  b) | round(a-b,  7)  !=  0                                                              |
@@ -51,7 +51,7 @@ This post contains the assert methods listed in the documentation for Python [un
 
 ## Type-Specific
 
-| Method                     | Used to Compare    |
+| <strong>Method</strong>                     | <strong>Used to Compare</strong>    |
 |----------------------------|--------------------|
 | assertMultiLineEqual(a, b) | strings            |
 | assertSequenceEqual(a,  b) | sequences          |
