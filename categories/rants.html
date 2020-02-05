@@ -6,7 +6,7 @@ layout: default
   <h2>Rants Posts</h2>
   <ul>
     {% for post in site.categories.rants %}
-      <li>{{ post.date | date: "%b %d" }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>{{ post.date | date: "%b %d, %Y" }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
