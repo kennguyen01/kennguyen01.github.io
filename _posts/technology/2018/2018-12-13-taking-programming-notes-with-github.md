@@ -1,7 +1,7 @@
 ---
 title: Taking Programming Notes with Github
 date: 2018-12-13
-categories: programming
+categories: technology
 ---
 
 I used to take programming notes with pen and paper. It was helpful in the beginning because it forced me to focus on the code so I can write it down. The drawback is that it's really slow and sometimes the code can go over several pages. Trust me, flipping through pages of code is not fun.
