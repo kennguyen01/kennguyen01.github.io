@@ -4,7 +4,7 @@ date: 2018-09-07
 categories: programming
 ---
 
-I’m finally back from hiatus. It’s been a while since I wrote my last blog post. I’ll take some time in this post to share what I’ve learned during the time period. One of the thing I was always hesitant to approach while learning to program was C. This is because I had this image in my head that C is an extremely difficult language to learn. I remembered my friends told me that they hated writing C code because it is a low level language. They had to manually allocate memory, fiddling with pointers, and all the other good stuff C provided. Since I had time this summer, I decided to bite the bullet and finally sit down to learn C.
+It’s been a while since I wrote my last blog post. I’ll take some time in this post to share what I’ve learned during the time period. One of the thing I was always hesitant to approach while learning to program was C. This is because I had this image in my head that C is an extremely difficult language to learn. I remembered my friends told me that they hated writing C code because it is a low level language. They had to manually allocate memory, fiddling with pointers, and all the other good stuff C provided. Since I had time this summer, I decided to bite the bullet and finally sit down to learn C.
 
 <!--more-->
 
