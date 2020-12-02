@@ -27,14 +27,14 @@
 
     <div id="content-wrapper">
       <div class="inner clearfix">
+        
         <section id="main-content">
-
           {{ content }}
-
         </section>
 
         <aside id="sidebar">
           <h2 id="menu">Menu</h2>
+          
           <nav class="menu">
             <h3><a href="/">Home</a></h3>
             <h3><a href="/about">About</a></h3>
@@ -43,6 +43,7 @@
           </nav>
 
           <h2 id="post-categories">Post Categories</h2>
+          
           <nav class="menu">
             {% for category in site.categories %}
               <p><a href="/categories/{{ category | first }}">{{ category | first | capitalize}}</a> ({{ category | last | size }})</p>
@@ -54,5 +55,10 @@
         </aside>
       </div>
     </div>
+    
+    {% if jekyll.environment == 'production' %}
+      {% include statcounter.html %}
+    {% endif %}
+    
   </body>
 </html>
