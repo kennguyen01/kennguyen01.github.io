@@ -8,22 +8,29 @@ One of the annoyance I have with using Ubuntu is installing the right drivers fo
 
 <!--more-->
 
-1. 
+## [Asus USB-N10](https://www.asus.com/us/Networking/USBN10/)
 
-2. [TP-Link TL-WN725N V1](https://www.tp-link.com/us/home-networking/usb-adapter/tl-wn725n/)
+<p align="center">
+  <img width="200" src="https://i.imgur.com/uiX8toW.jpg" alt="Forest App Interface">
+</p>
+
+This is one of the rare adapters that is compatible with Ubuntu from the start. I've been using this adapter since 16.04 for multiple devices and it has never given me any issue. It's the fallback for me when I install Ubuntu on a new device without a nearby Ethernet cable. If you just want an adapter that works, get this.
+
+## [TP-Link TL-WN725N V1](https://www.tp-link.com/us/home-networking/usb-adapter/tl-wn725n/)
 
 <p align="center">
   <img width="125" src="https://i.imgur.com/fgVhixi.jpg" alt="Forest App Interface">
 </p>
 
-[Original answer](https://askubuntu.com/questions/678134/how-to-install-tp-link-wn725n-wifi-usb-adapter-on-ubuntu-ubuntu-14-04-3-lts) on Ask Ubuntu:
+### RTL8188EU
+
+[Ask Ubuntu answer](https://askubuntu.com/questions/678134/how-to-install-tp-link-wn725n-wifi-usb-adapter-on-ubuntu-ubuntu-14-04-3-lts):
 
 ```shell
 sudo apt-get update
 sudo apt-get install linux-headers-$(uname -r)
 sudo apt-get update
-sudo apt-get install build-essential
-sudo apt-get install git
+sudo apt-get install build-essential git
 git clone https://github.com/lwfinger/rtl8188eu
 cd rtl8188eu
 make all
@@ -46,5 +53,50 @@ sudo insmod 8188eu.ko
 reboot
 ```
 
-The speed is definitely slower and connection can be spotty at best. But at least the adapter is working.
+I have been having some issues with this driver. The connection is slow and spotty at best. It's better to use RTL8192EU instead.
 
+### RTL8192EU
+
+This driver increased the speed of my connection significantly.
+
+[ clnhub/rtl8192eu-linux README](https://github.com/clnhub/rtl8192eu-linux):
+
+```shell
+sudo apt install linux-headers-generic build-essential dkms git
+git clone https://github.com/clnhub/rtl8192eu-linux.git
+cd rtl8192eu-linux/
+./install_wifi.sh
+reboot
+```
+
+## [Tenda U12](https://www.tendacn.com/us/product/u12.html)
+
+<p align="center">
+  <img width="275" src="https://i.imgur.com/uLDAHmp.jpg" alt="Forest App Interface">
+</p>
+
+[ gordboy/rtl8812au-5.9.3.2 README](https://github.com/gordboy/rtl8812au-5.9.3.2):
+
+```shell
+sudo apt install build-essential git dkms
+git clone https://github.com/gordboy/rtl8812au-5.9.3.2.git
+cd rtl8812au-5.9.3.2/
+make
+sudo make install
+cd ..
+sudo cp -r rtl8812au-5.9.3.2/ /usr/src
+sudo dkms add -m rtl8812au -v 5.9.3.2
+sudo dkms build -m rtl8812au -v 5.9.3.2
+sudo dkms install -m rtl8812au -v 5.9.3.2
+```
+
+Run `sudo gedit /etc/NetworkManager/NetworkManager.conf` and add the lines below if they're not there:
+
+```shell
+[device]
+wifi.scan-rand-mac-address=no
+```
+
+Reboot and it should work.
+
+The problem with this adapter is that it sometimes doesn't pick up the 5 Ghz band. It's better just to use 2.4 Ghz so you don't encounter any connection issue.
