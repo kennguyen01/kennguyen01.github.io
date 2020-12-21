@@ -1,7 +1,7 @@
 ---
 title: Uncommon Semantic HTML Tags
 date: 2019-04-16
-categories: web-development
+categories: web
 ---
 
 I've been using HTML for a while now to build websites but every now and then, I learn something new about the language. There are a lot of different tags in HTML, some provide the structure of the page while others provide the meaning to it. With HTML5, there's some new semantic markup that I learned and want to share in this post.

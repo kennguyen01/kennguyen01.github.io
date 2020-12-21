@@ -1,7 +1,7 @@
 ---
 title: Open Links in Same Tab
 date: 2019-12-19
-categories: web-development
+categories: web
 ---
 
 In all my posts, the attribute I always put in a new link is `target="_blank"`. Ever since I learned that you can open a link in a new tab, I defaulted to that behavior. I never thought about how I'm forcing my users to do things the way I wanted instead of leaving the choice to them. Personally I tend to hold the `Ctrl` button when I click on the new link so I don't lose track of what I'm current reading. While that's something that I preferred, that is not the default option that browsers enforce. 

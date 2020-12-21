@@ -1,7 +1,7 @@
 ---
 title: Jekyll Static Blog with Github Pages
 date: 2018-11-28
-categories: web-development
+categories: web
 ---
 
 For the past couple weeks I've been looking for a new host for my websites. My hosting plan with NameCheap expired last week so I've been shopping around to find a better host. Initially I considered renewing the hosting plan again since it's only $38.88 per year, plus $8.88 for the SSL certificate, and $13.16 for the domain name. But I decided against it because if I just renew my hosting plan, I would just end up using WordPress again. There's nothing wrong with using WordPress but I would not learn anything new from it.

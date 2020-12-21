@@ -1,7 +1,7 @@
 ---
 title: Taking a Look at Users of Accessible Websites
 date: 2018-03-20
-categories: web-development
+categories: web
 ---
 
 When I took a MOOC to learn HTML/CSS a while back, I remembered the instructor encouraged students to create accessible websites. I understood the premise behind it. By making accessible sites, I’d be able to reach a wider audience. Since not every user has access to a good computer with fast internet connection running the latest browser. It’s the same thing with parking at any given shopping area. There are a lot more normal parking spots than handicapped spots but they are there for a reason. People with disability can easily find the designated spots in a crowded parking lot.

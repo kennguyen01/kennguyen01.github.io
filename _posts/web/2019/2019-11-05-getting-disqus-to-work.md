@@ -1,7 +1,7 @@
 ---
 title: Getting Disqus to Work
 date: 2019-11-05
-categories: web-development
+categories: web
 ---
 
 My blog is chugging along so far but it's still missing a vital component, the comment section. When I was running my blog on WordPress, the feature was already included so I never thought much about it. After migrating over to Jekyll, I noticed the missing comment box at the bottom. It wasn't a big deal for me because barely anyone dropped by my blog anyway.

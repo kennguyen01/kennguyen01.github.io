@@ -1,7 +1,7 @@
 ---
 title: Wix, a Platform Full of Problems
 date: 2019-02-03
-categories: web-development
+categories: web
 ---
 
 Maybe you've heard of [Wix](#https://www.wix.com/), it's a popular drag and drop site builder. I had a client recently who purchased the hosting and domain name from Wix for his nonprofit site. He contacted me to help him design the site. Initially, I was hesitant about the project since it involved Wix. I have not worked extensively with Wix but I've heard negative things about the platform. However, I thought to myself that maybe I could learn something new from this project so I took him on the offer.
