@@ -4,7 +4,7 @@ date: 2020-12-28
 categories: web
 ---
 
-For the [library project](top-projects/library/) on The Odin Project, I spent a few hours learning how to make a modal. I did not have to make one, but I had fun learning how to do it. This post is a quick guide on making a popup modal. I pulled this straight from the library project. You can adjust it as needed.
+For the [library project](https://raisingexceptions.com/top-projects/library/) on The Odin Project, I spent a few hours learning how to make a modal. I did not have to make one, but I had fun learning how to do it. This post is a quick guide on making a popup modal. I pulled this straight from the library project. You can adjust it as needed.
 
 <!--more-->
 
