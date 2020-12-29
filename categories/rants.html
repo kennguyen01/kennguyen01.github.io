@@ -3,10 +3,15 @@ layout: default
 ---
 
 <div>
-  <h2>Rants Posts</h2>
-  <ul>
-    {% for post in site.categories.rants %}
-      <li>{{ post.date | date: "%b %d, %Y" }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+  <h2>Rants</h2>
+  {% assign postsByYear = site.categories.rants | group_by_exp:"post", "post.date | date: '%Y'" %}
+
+  {% for year in postsByYear %}
+    <h3>{{ year.name }}</h3>
+    <ul>
+      {% for post in year.items %}
+        <li>{{ post.date | date: "%b %d" }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 </div>
