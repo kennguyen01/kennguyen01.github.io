@@ -77,7 +77,7 @@ If you want to see other pip commands, type `pip3 --help`.
 `virtualenv` allows you to create a copy of Python installation on a specific directory. To install it, you just use pip:
 
 ```shell
-$ pip3 install virtualenv
+$ sudo apt install python3-venv
 ```
 
 The good thing about virtualenv is that packages you installed in the virtual environment will not affect the global packages on your system. For example, you are starting a new project and you need to install packages specific to the project, you can `cd` into the project directory and create a virtual environment inside:
