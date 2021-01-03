@@ -111,3 +111,56 @@ Remember that the virtual environment is simply directory on your system. If you
 ```shell
 $ rm -rf venv
 ```
+
+## Specific Python Version
+
+### Installing pyenv
+
+To use a specific version of Python when working on a project, use [pyenv](https://github.com/pyenv/pyenv). The simplest way to install it is by using [pyenv-installer](https://github.com/pyenv/pyenv-installer).
+
+Before installing `pyenv-installer`, we need to install some dependencies:
+
+```shell
+$ sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+```
+
+Then run:
+
+```shell
+$ curl https://pyenv.run | bash
+$ exec $SHELL
+```
+
+But the path will not be exported to `.bashrc` so you need to do that:
+
+```shell
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
+$ exec $SHELL
+```
+
+You can check the version and update with:
+
+```shell
+$ pyenv version
+$ pyenv update
+```
+
+### Uninstall pyenv
+
+To remove pyenv:
+
+```shell
+$ rm -rf ~/.pyenv
+```
+
+And remove the lines below from `.bashrc`:
+
+```shell
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
+
+Then restart with `exec $SHELL`.
