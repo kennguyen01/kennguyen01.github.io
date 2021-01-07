@@ -6,6 +6,7 @@ gem "jekyll-theme-architect"
 gem "kramdown"
 gem "kramdown-parser-gfm"
 gem "github-pages"
+gem "nokogiri", ">= 1.11.0.rc4"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
