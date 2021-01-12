@@ -1,10 +1,10 @@
 ---
 title: Read, Exercise, Meditate
-date: 2021-01=07
+date: 2021-01-07
 categories: rants
 ---
 
-In 2020, time passed slowly for me because I stayed indoor most of the time. Every time I followed the news, constant barrage of sensational stories overwhelmed me. I watched the riot at the Capitol Building with dread and uncertainty yesterday because I live 30 minutes away from where it happened. With so many things going on around the U.S., I decided that it's much better for me to focus on my well-being rather than following current events.
+In 2020, time passed slowly for me because I stayed indoor most of the time. Every time I followed the news, constant barrage of sensational stories overwhelmed me. I watched the riot at the Capitol Building with dread and uncertainty because I live 30 minutes away from where it happened. With so many things going on around the U.S., I decided that it's much better for me to focus on my well-being rather than getting sucked into current events.
 
 <!--more-->
 
