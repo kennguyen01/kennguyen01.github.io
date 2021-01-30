@@ -12,14 +12,14 @@ I've been building a bot for a game called Audiosurf 2. In that game, you play a
 
 For any programming problem, I first Googled the problem to see how other people solved it. I did not find a direct answer to my problem. OpenCV is a large library so there are many similar questions, but very different implementations. I spent the next couple hours turning all the links purple but did not find what I was looking for. The good thing is that a lot of people recommended the OpenCV documentations instead.
 
-I always tend to avoid reading the docs because they either are lacking or not easy to understand. But I was pleasantly surprised when the docs on [cascade training](https://docs.opencv.org/3.4/dc/d88/tutorial_traincascade.html) was simple and straightforward.
+I always tend to avoid reading the docs because they either are lacking or not easy to understand. I was pleasantly surprised when the docs on [cascade training](https://docs.opencv.org/3.4/dc/d88/tutorial_traincascade.html) was simple and straightforward.
 
 ## Negative Samples
 
 The docs recommend the negative samples be taken from arbitrary images not containing what I wanted to detect. For example, if I wanted to detect a car, my negative samples would be anything that is not a car. The difficult part for me was that my images contain both negative and positive samples.
 
 <p align="center">
-  <img src="#" alt="Audiosurf 2 Image">
+  <img width="400" src="https://i.imgur.com/lUi4rSF.jpg" alt="Audiosurf 2 Image">
 </p>
 
 ### Cropping Image Contours
@@ -27,26 +27,26 @@ The docs recommend the negative samples be taken from arbitrary images not conta
 A method I tried was cropping out the contours of the objects. I found a [method](https://www.quora.com/How-can-I-detect-an-object-from-static-image-and-crop-it-from-the-image-using-openCV) on Quora that did this for me:
 
 ```py
-    import cv2  
-    image = cv2.imread("example.jpg") 
-    gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY) 
-    edged = cv2.Canny(image, 10, 250) 
-    (cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) 
-    idx = 0 
-    for c in cnts: 
-    	x,y,w,h = cv2.boundingRect(c) 
-    	if w>50 and h>50: 
-    		idx+=1 
-    		new_img=image[y:y+h,x:x+w] 
-    		cv2.imwrite(str(idx) + '.png', new_img) 
-    cv2.imshow("im",image) 
-    cv2.waitKey(0) 
+import cv2  
+image = cv2.imread("example.jpg") 
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
+edged = cv2.Canny(image, 10, 250) 
+(cnts, _) = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) 
+idx = 0 
+for c in cnts: 
+    x, y, w, h = cv2.boundingRect(c) 
+    if w > 50 and h > 50: 
+        idx += 1 
+        new_img = image[y: y + h, x: x + w] 
+        cv2.imwrite(str(idx) + '.png', new_img) 
+cv2.imshow("im", image) 
+cv2.waitKey(0) 
 ```
 
 It created a lot of fragments from my image due to unclear boundaries between objects. The cropped images also contained the blocks I want to detect in there. If I chose to use this method, I needed to go through all the cropped images and remove the positive samples. It was not a viable solution.
 
 <p align="center">
-  <img src="#" alt="Image Contours">
+  <img width="400" src="https://i.imgur.com/Bllkmo3.jpg" alt="Image Contours">
 </p>
 
 ### Hiding Positive Samples
@@ -56,7 +56,7 @@ I went back to the docs and read it more carefully this time. The negative sampl
 That simply meant I went and drew a black box to cover the block.
 
 <p align="center">
-  <img src="#" alt="Hiding Positive Sample in Image">
+  <img width="400" src="https://i.imgur.com/agPSwLP.jpg" alt="Hiding Positive Sample in Image">
 </p>
 
 ## Positive Samples
@@ -70,7 +70,7 @@ opencv_annotation.exe --annotations=pos_block.txt --images=positive_block/
 ```
 
 <p align="center">
-  <img src="#" alt="Annotating Image">
+  <img width="400" src="https://i.imgur.com/P46mgc7.jpg" alt="Annotating Image">
 </p>
 
 The process was tedious when I had 350 images to go over. There are probably better ways but I wanted to see how good the model was before writing more code to automate it.
@@ -93,6 +93,6 @@ Training the model was straightforward. I ran the command:
 opencv_traincascade.exe -data cascade_block/ -vec pos_block.vec -bg neg_block.txt -numPos 900 -numNeg 350 -numStages 25 -w 24 -h 24 -precalcValBufSize 2048 -precalcIdxBufSize 2048
 ```
 
-It took me several training sessions to get what I wanted. Training a cascade can take a long time so I usually run it for 10 stages and test the result before more training.
+It took me several training sessions to get what I wanted. Training a cascade can take a long time, so I usually run it for 10 stages and test the result before more training.
 
-Preparing good data is the most important process for machine learning. I used random images before and the result was bad. By taking my time to manually creating negative and positive samples, I ensured my model is effective.
+Preparing good data is the most important process for machine learning. The result was bad when I used ranodm images before. By taking my time to manually creating negative and positive samples, I ensured my model is effective.
