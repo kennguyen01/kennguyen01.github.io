@@ -6,6 +6,8 @@ categories: programming
 
 Every month, I hop on to Vanguard to take a look at my IRA account. Since I don't have automatic investing set up, I manually contribute to my IRA and allocate the money to the specific ETFs that I own. The contribution limit for 2019 was \$6,000 so every month I would contribute $500. While manual contribution seems like additional work compared to using a target date fund, it offers me the advantage of freely allocating my portfolio. The tradeoff is that I need to spend around ten minutes every month crunching the numbers for the allocation. To make the process less tedious, I wrote a simple portfolio rebalance calculator for that. In this post, I'll talk about the rationale behind choosing to do my own allocation and how the rebalance calculator helped me.
 
+Link to Project: [Rebalance Calculator](https://kingle.pythonanywhere.com/rebalance)
+
 <!--more-->
 
 ## Manual Allocation Rationale
@@ -54,8 +56,6 @@ My strategy for investing favors simplicity. I'm only going to buy and hold. I a
 
 ## Rebalance Calculator
 
-Of course sitting down and crunching the numbers every month is not a task I look forward to. That's why I wrote a simple rebalance calculator to help me with that. Feel free to take a look at it using the link below:
-
-[Rebalance Calculator](https://kingle.pythonanywhere.com/rebalance)
+Of course sitting down and crunching the numbers every month is not a task I look forward to. That's why I wrote a simple rebalance calculator to help me with that.
 
 The app takes in a string of tickers, get their names, equity type, and prices from Yahoo Finance. Then I can enter how much I plan to contribute to my IRA, along with my current holding for each ticker and target allocation. Then it calculates how much I need to buy or sell for each ticker to achieve the desired allocation. By letting the computer calculates the number for me, I avoid doing the error prone tedious calculations.

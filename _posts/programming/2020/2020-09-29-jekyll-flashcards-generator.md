@@ -8,6 +8,8 @@ The last post I wrote was on March, right before the pandemic happened. I never 
 
 In the beginning, I spent a good chunk of that time just playing video games. The news was saying how if everyone practices social distancing and wear masks, the pandemic would be under control in just a couple of months. It's been six months since then and the number has only been increasing. So now I try to use the time to work on a project that create flashcards using Jekyll and Github Pages.
 
+Here is the link to the project: [Jekyll Flashcards](https://raisingexceptions.com/jekyll-flashcards/)
+
 <!--more-->
 
 ## The Need for Flashcards
@@ -41,5 +43,3 @@ I actually spent about half of my time working with the Firefox Developer Tools 
 The most difficult aspect for me was working on a simple test for each deck of cards. I have the terms inside an object and need to loop through them as the test continues. But at the same time, the loop needs to stop and wait for user to selects whether the answer was correct or not. I did some research and it turned out `async` and `await` are the keywords here.
 
 I've never worked with async before. I spent quite a bit of time figuring out how to resolve the `Promise` so the loop does not get stuck on the first term. After I understand how the promises are consumed, it was a great feeling.
-
-Here is the link to the project: [Jekyll Flashcards](https://raisingexceptions.com/jekyll-flashcards/)
