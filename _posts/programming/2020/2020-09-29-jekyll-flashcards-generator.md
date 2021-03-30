@@ -34,9 +34,9 @@ With that in mind, there's only one site that I trust to handle this: Github. Ev
 
 ## It's All About the JavaScript
 
-I started by trying to use JS to read the markdown files in the repo. That didn't work out too well due to the fact that the site is static. Jekyll generates the site with support from Github Pages. That means JS can only access whatever content is already rendered by the time the script loads.
+I started by trying to use JavaScript to read the markdown files in the repo. That didn't work out too well due to the fact that the site is static. Jekyll generates the site with support from Github Pages. That means JavaScript can only access whatever content is already rendered by the time the script loads.
 
-I actually spent about half of my time working with the Firefox Developer Tools instead of just writing code. Mostly from trying to see how the content is generated and manipulate it with JS.
+I actually spent about half of my time working with the Firefox Developer Tools instead of just writing code. Mostly from trying to see how the content is generated and manipulate it with JavaScript.
 
 ### It's Not Complete Without a Test
 
