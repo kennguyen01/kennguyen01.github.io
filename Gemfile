@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "jekyll"
 gem 'jekyll-sitemap'
 gem "jekyll-theme-architect"
-gem "kramdown"
+gem "kramdown", ">= 2.3.1"
 gem "kramdown-parser-gfm"
 gem "github-pages"
 gem "nokogiri", ">= 1.11.0.rc4"
