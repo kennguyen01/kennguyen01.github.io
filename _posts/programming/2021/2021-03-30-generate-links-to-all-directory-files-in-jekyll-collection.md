@@ -45,12 +45,14 @@ tag: Peak
 I created `links.html` inside the `_includes` directory with the following Liquid code:
 
 ```
+{% raw %}
 {% for doc in site.pages %}
   {% if doc.tag == include.tag %}
     {{ doc.url | split: "/" | last }}
     {{ doc.title }}
   {% endif %}
 {% endfor %}
+{% endraw %}
 ```
 
 The code above grabs all the documents that have the same tag. Since Jekyll outputs an HTML file for each document, there is a URL to each one of them. Using the same example earlier, the URL to that example is: `/notes/peak/the-power-of-purposeful-practice.html`. I am only interested in the relative link of that URL so I split the string at the forward slash and grab the last part of the URL.
@@ -69,8 +71,6 @@ My directory tree looks similar to this:
 ```
 
 The last thing I need to do is going back to the markdown file and include `links.html` to where I want to display the links. I pass the front matter tag to the `include` statement. 
-
-Note that I added the `raw` tag so that liquid will ignore the statement. Remove the two `raw` statements when you use the code.
 
 ```
 {% raw %}
