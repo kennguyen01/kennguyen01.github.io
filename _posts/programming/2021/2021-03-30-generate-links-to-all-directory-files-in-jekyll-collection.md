@@ -68,10 +68,14 @@ My directory tree looks similar to this:
         └── the-power-of-purposeful-practice.md
 ```
 
-The last thing I need to do is going back to the markdown file and include `links.html` to where I want to display the links. I pass the front matter tag to the `include` statement:
+The last thing I need to do is going back to the markdown file and include `links.html` to where I want to display the links. I pass the front matter tag to the `include` statement. 
+
+Note that I added the `raw` tag so that liquid will ignore the statement. Remove the two `raw` statements when you use the code.
 
 ```
+{% raw %}
 {% include links.html tag=page.tag %}
+{% endraw %}
 ```
 
-Now your document will show links to the documents that share the same tag sinde that directory.
+Now your document will show links to the documents that share the same tag inside that directory.
