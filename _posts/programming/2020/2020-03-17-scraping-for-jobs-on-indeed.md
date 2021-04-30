@@ -12,9 +12,7 @@ Link to project: [Job Applications Backlog](https://github.com/kennguyen01/job-a
 
 To become one, I would need to complete the application to become a publisher:
 
-<p align="center">
-  <img src="https://i.imgur.com/XhwF1Of.jpg" alt="Indeed Publisher Application">
-</p>
+{% include image.html url="https://i.imgur.com/XhwF1Of.jpg" text="Indeed Publisher Application" %}
 
 I doubt my application would be approved because I only intend to use the API for myself. So I did the next best thing, I wrote a program to scrape job postings and export all the data to a CSV file.
 
