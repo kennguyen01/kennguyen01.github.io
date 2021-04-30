@@ -7,6 +7,7 @@ gem "kramdown", ">= 2.3.1"
 gem "kramdown-parser-gfm"
 gem "github-pages"
 gem "nokogiri", ">= 1.11.0.rc4"
+gem "rexml", ">= 3.2.5"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
