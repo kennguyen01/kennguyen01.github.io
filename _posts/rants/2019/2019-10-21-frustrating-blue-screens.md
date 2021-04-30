@@ -4,9 +4,7 @@ date: 2019-10-21
 categories: rants
 ---
 
-<p align="center">
-  <img alt="Windows 10 logo" src="https://i.imgur.com/QHpoN9w.jpg">
-</p>
+{% include image.html url="https://i.imgur.com/QHpoN9w.jpg" text="Windows 10 logo" %}
 
 It's a regular Tuesday night. I came back from work, had dinner, and watched some YouTube videos to pass the time. Then all of a sudden, the screen went black and this message popped up:
 
@@ -36,9 +34,7 @@ Not even two hours later, the ominous blue screen came back. Three blue screens 
 
 ## Ubuntu to the Rescue
 
-<p align="center">
-  <img alt="Ubuntu logo" src="https://i.imgur.com/NgiNGqE.png">
-</p>
+{% include image.html url="https://i.imgur.com/NgiNGqE.png" text="Ubuntu logo" %}
 
 At this point, I just wanted an OS that works. The main reason why I stuck with Windows on my desktop is because of games. No other system can compare to Windows in term of game choices. Any well known game publisher will always release a Windows version for their games. However, if I can't even use my computer, there's no point for me to even think about gaming.
 

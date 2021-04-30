@@ -37,9 +37,7 @@ When setting up a repo, you have two options: `git init` and `git clone`.
 git clone <repo-url>
 ```
 
-<p align="center">
-  <img src="https://i.imgur.com/fPppn9T.jpg" alt="Cloning git repo" />
-</p>
+{% include image.html url="https://i.imgur.com/fPppn9T.jpg" text="Cloning git repo" %}
 
 ## Staging
 
