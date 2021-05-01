@@ -10,13 +10,17 @@ One of the annoyance I have with using Ubuntu is installing the right drivers fo
 
 ## [Asus USB-N10](https://www.asus.com/us/Networking/USBN10/)
 
-{% include image.html url="https://i.imgur.com/uiX8toW.jpg" text="Forest App Interface" %}
+<p align="center">
+  <img width="200" src="https://i.imgur.com/uiX8toW.jpg" alt="Forest App Interface">
+</p>
 
 This is one of the rare adapters that is compatible with Ubuntu from the start. I've been using this adapter since 16.04 for multiple devices and it has never given me any issue. It's the fallback for me when I install Ubuntu on a new device without a nearby Ethernet cable. If you just want an adapter that works, get this.
 
 ## [TP-Link TL-WN725N V1](https://www.tp-link.com/us/home-networking/usb-adapter/tl-wn725n/)
 
-{% include image.html url="https://i.imgur.com/fgVhixi.jpg" text="Forest App Interface" %}
+<p align="center">
+  <img width="125" src="https://i.imgur.com/fgVhixi.jpg" alt="Forest App Interface">
+</p>
 
 ### RTL8188EU
 
@@ -67,7 +71,9 @@ reboot
 
 ## [Tenda U12](https://www.tendacn.com/us/product/u12.html)
 
-{% include image.html url="https://i.imgur.com/uLDAHmp.jpg" text="Forest App Interface" %}
+<p align="center">
+  <img width="275" src="https://i.imgur.com/uLDAHmp.jpg" alt="Forest App Interface">
+</p>
 
 [ gordboy/rtl8812au-5.9.3.2 README](https://github.com/gordboy/rtl8812au-5.9.3.2):
 

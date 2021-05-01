@@ -6,7 +6,9 @@ categories: technology
 
 When I was in high school, Internet Explorer (IE) was the default for Windows so my family only used it. Since they were older and less tech savvy, they clicked yes to every single request asking to add a new toolbar. I was sharing the computer with my family so whenever I open up IE, it looked like a bunch of people just vomited all over the screen.
 
-{% include image.html url="https://i.imgur.com/I6uLvSI.jpg" text="IE toolbars" %}
+<p align="center">
+  <img alt="IE toolbars" src="https://i.imgur.com/I6uLvSI.jpg">
+</p>
 
 <!--more-->
 
@@ -14,7 +16,9 @@ I removed all those toolbars every chance I had. Then my family added them back 
 
 ## Firefox Add-Ons Fiasco
 
-{% include image.html url=https://i.imgur.com/htLVqae.jpg" text="Firefox logo" %}
+<p align="center">
+  <img alt="Firefox logo" src="https://i.imgur.com/htLVqae.jpg">
+</p>
 
 Back in May this year, Firefox had a big issue regarding an expired certificate that disabled all add-ons. You can read more about it here, [Firefox expired cert](https://www.computerworld.com/article/3393446/mozilla-issues-fix-after-it-lets-cert-expire-and-firefox-add-ons-go-belly-up.html). The issue wasn't a big deal if you didn't rely too much on any add-on. But all of us have at least an ad blocker. I used uBlock Origin all the time and I felt the effect immediately. Websites started to display a ton of ads and YouTube videos were showing me commercials after commercials before the video even started.
 
@@ -24,7 +28,9 @@ Without a solution in sight, I was forced to download Chrome while Firefox fixed
 
 ## The Privacy Issue
 
-{% include image.html url="https://i.imgur.com/6us3yUK.jpg" text="Chrome logo" %}
+<p align="center">
+  <img alt="Chrome logo" src="https://i.imgur.com/6us3yUK.jpg">
+</p>
 
 I knew that I wouldn't be using Chrome long term due to privacy. While Chrome is definitely one of the best browser out there, it's still a product designed by Google to collect data from users. I'm guilty of being a long time Google customer. Everything they make is extremely convenient, such as Gmail, Google Calendar, and the Google search itself. I made efforts in recent years to remove myself from the Google ecosystem but it's still a work in progress.
 
@@ -32,7 +38,9 @@ The same point can also be made for Edge. It's also a product bundled together w
 
 ## A Brave New Browser?
 
-{% include image.html url="https://i.imgur.com/B9NYZJu.jpg" text="Brave logo" %}
+<p align="center">
+  <img alt="Brave logo" src="https://i.imgur.com/B9NYZJu.jpg">
+</p>
 
 Let's talk about a browser that I started to use recently, Brave. It's a browser built on top of Chromium that offered built-in ad blocker. When I first used it, I was pleasantly surprised at how fast it was. While the built-in ad blocker it not as good as uBlock Origin, it was decent enough that I don't mind using it. Since it's based on Chromium, any extension I use on Chrome or Firefox can easily be transferred over.
 

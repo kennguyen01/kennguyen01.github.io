@@ -18,7 +18,9 @@ I always tend to avoid reading the docs because they either are lacking or not e
 
 The docs recommend the negative samples be taken from arbitrary images not containing what I wanted to detect. For example, if I wanted to detect a car, my negative samples would be anything that is not a car. The difficult part for me was that my images contain both negative and positive samples.
 
-{% include image.html url="https://i.imgur.com/lUi4rSF.jpg" text="Audiosurf 2 Image" %}
+<p align="center">
+  <img width="400" src="https://i.imgur.com/lUi4rSF.jpg" alt="Audiosurf 2 Image">
+</p>
 
 ### Cropping Image Contours
 
@@ -43,7 +45,9 @@ cv2.waitKey(0)
 
 It created a lot of fragments from my image due to unclear boundaries between objects. The cropped images also contained the blocks I want to detect in there. If I chose to use this method, I needed to go through all the cropped images and remove the positive samples. It was not a viable solution.
 
-{% include image.html url="https://i.imgur.com/Bllkmo3.jpg" text="Image Contours" %}
+<p align="center">
+  <img width="400" src="https://i.imgur.com/Bllkmo3.jpg" alt="Image Contours">
+</p>
 
 ### Hiding Positive Samples
 
@@ -51,7 +55,9 @@ I went back to the docs and read it more carefully this time. The negative sampl
 
 That simply meant I went and drew a black box to cover the block.
 
-{% include image.html url="https://i.imgur.com/agPSwLP.jpg" text="Hiding Positive Sample in Image" %}
+<p align="center">
+  <img width="400" src="https://i.imgur.com/agPSwLP.jpg" alt="Hiding Positive Sample in Image">
+</p>
 
 ## Positive Samples
 
@@ -63,7 +69,9 @@ In [OpenCV 3.3.14](https://sourceforge.net/projects/opencvlibrary/files/3.4.13/)
 opencv_annotation.exe --annotations=pos_block.txt --images=positive_block/
 ```
 
-{% include image.html url="https://i.imgur.com/P46mgc7.jpg" text="Annotating Image" %}
+<p align="center">
+  <img width="400" src="https://i.imgur.com/P46mgc7.jpg" alt="Annotating Image">
+</p>
 
 The process was tedious when I had 350 images to go over. There are probably better ways but I wanted to see how good the model was before writing more code to automate it.
 

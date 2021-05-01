@@ -4,7 +4,9 @@ date: 2019-11-28
 categories: technology
 ---
 
-{% include image.html url="https://i.imgur.com/cUNYzEK.jpg" text="WordPress logo" %}
+<p align="center">
+  <img src="https://i.imgur.com/cUNYzEK.jpg" alt="WordPress logo">
+</p>
 
 If someone who knows nothing about making websites asked me how they can make one, my answer has always been the same: WordPress. While that seems like the obvious, it's really the best option for them. I've been using WordPress way before I learned to write my first line of code. While it has a learning curve if you've never used it before, there are plenty of resources available to help you out. If those resources cannot solve your problems, there are many people who develop and use WordPress that can answer your questions.
 
@@ -14,7 +16,9 @@ But this post is not about using WordPress itself. There are many good resources
 
 ## Local by Flywheel
 
-{% include image.html url="https://i.imgur.com/EsXtVu9.jpg" text="Local by Flywheel" %}
+<p align="center">
+  <img src="https://i.imgur.com/EsXtVu9.jpg" alt="Local by Flywheel">
+</p>
 
 If you still haven't looked up that name, do it now. Better yet, let me give you the [link](https://localbyflywheel.com/). This is hands down the best WordPress development I've ever used. I used it when it first came out and I fell in love with this product ever since. You don't need to know any knowledge of coding or setting up a virtual environment. You click a few buttons and you are ready to develop your site locally.
 

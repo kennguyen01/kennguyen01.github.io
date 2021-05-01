@@ -14,13 +14,17 @@ Now that I have some free time to update my blog more often, it feels incomplete
 
 Sign up for an account on [Disqus](https://disqus.com/) and you'll be taken to the intent page, choose to install Disqus.
 
-{% include image.html url="https://i.imgur.com/0EmMd54.jpg" text="Disqus intent" %}
+<p align="center">
+  <img alt="Disqus intent" src="https://i.imgur.com/0EmMd54.jpg" />
+</p>
 
 After entering your site information and receiving a shortname, you'll be taken to the **Plan** page. Ignore the three paid options and scroll down to select the free **Basic** plan. It will then ask you to select the platform your site is currently using. They listed the majority of popular CMS on the page but if you don't find yours, you can install it manually using the button at the bottom.
 
 I'm using Jekyll so the next page gave me instructions on the platform.
 
-{% include image.html url="https://i.imgur.com/wue1bTY.jpg" text="Disqus Jekyll install instructions" %}
+<p align="center">
+  <img alt="Disqus Jekyll install instructions" src="https://i.imgur.com/wue1bTY.jpg" />
+</p>
 
 Open the link for the **Universal Embed Code** in a new tab, we'll get back to it later. Then click on **Configure** and move on to the next page. Here, enter your site full URL along with any information you want to enter and click **Complete Setup**. That's it, you're done with the setup.
 

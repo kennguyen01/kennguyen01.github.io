@@ -12,7 +12,9 @@ Since I first started this blog, I used Google Analytics to track the traffic. B
 
 So this is the traffic for my blog for the past 30 days:
 
-{% include image.html url="https://i.imgur.com/kRubti5.jpg" text="Cloudflare traffic" %}
+<p align="center">
+  <img src="https://i.imgur.com/kRubti5.jpg" alt="Cloudflare traffic">
+</p>
 
 Meanwhile, Google Analytics told me that my site received 17 visitors during the same time period. That's 184% difference. If increasing traffic was my primary goal, I would be tearing my hair out wondering why there's only 17 people who dropped by for the whole month. The discrepancy was real so I did some research as to why.
 
